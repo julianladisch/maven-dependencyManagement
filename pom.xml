@@ -5,6 +5,7 @@
   <groupId>invalid</groupId>
   <artifactId>maven-dependencyManagement</artifactId>
   <version>0</version>
+  <packaging>pom</packaging>
 
   <dependencyManagement>
     <dependencies>
@@ -18,11 +19,8 @@
     </dependencies>
   </dependencyManagement>
 
-  <dependencies>
-    <dependency>
-      <groupId>org.apache.logging.log4j</groupId>
-      <artifactId>log4j-core</artifactId>
-    </dependency>
-  </dependencies>
+  <modules>
+    <module>submodule</module>
+  </modules>
 
 </project>
