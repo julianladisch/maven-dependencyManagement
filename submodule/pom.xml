@@ -3,7 +3,7 @@
 
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>invalid</groupId>
+    <groupId>foo</groupId>
     <artifactId>maven-dependencyManagement</artifactId>
     <version>0</version>
   </parent>
