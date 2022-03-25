@@ -7,6 +7,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
+      - run: mvn dependency:tree -DoutputType=dot --file="pom.xml"
+      - name: snyk print deps
+        uses: snyk/actions/maven-3-jdk-11@master
+        with:
+          args: --all-projects --print-deps -d
+          command: test
       - name: Run Snyk to check for vulnerabilities
         uses: snyk/actions/maven-3-jdk-11@master
         env:
